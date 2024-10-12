@@ -44,22 +44,16 @@ logar(matricula, senhaAluno, "", "", "btn.btn-primary")
 sleep(1.5)
 navegador.execute_script("window.open('https://github.com/login', '_blank');")
 navegador.switch_to.window(navegador.window_handles[2])
-sleep(1.0)
-pg.write("teste@gmail.com")
-pg.press("capslock")
-sleep(1.0)
-pg.write("SENHA")
-pg.press('capslock')
-sleep(1.0)
-pg.press('enter')
+sleep(2.0)
+
 
 
 #Entra na Cisco
 sleep(1.5)
 navegador.execute_script("window.open('https://www.netacad.com/', '_blank');")
-navegador.switch_to(navegador.window_handles[3])
-sleep(1.0)
-btLogin = navegador.find_element(By.CLASS_NAME, "btn btn--ghost loginBtn--lfDa2")
+navegador.switch_to.window(navegador.window_handles[3])
+sleep(1.5)
+btLogin = navegador.find_element(By.CLASS_NAME, "btn btn--ghost.loginBtn--lfDa2")
 
 
 fechar = input("Clique Enter para fechar")
